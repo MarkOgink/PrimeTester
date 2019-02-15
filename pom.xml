@@ -8,7 +8,7 @@
   <artifactId>PrimeTester</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>PrimeTester</name>
+  <name>nl.han.oose.dea.PrimeTester</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -24,6 +24,11 @@
       <artifactId>junit</artifactId>
       <version>4.12</version>
       <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-math3</artifactId>
+      <version>3.6.1</version>
     </dependency>
   </dependencies>
 
