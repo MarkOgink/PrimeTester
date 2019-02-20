@@ -12,15 +12,15 @@ public class PrimeTestingApp {
     private void startTesting() {
         NumberUnderTest numberUnderTest = new NumberUnderTest();
 
-        PrimeTester tester1 = new PrimeTester(numberUnderTest, HIGHEST_NUMBER_TO_TEST);
-        PrimeTester tester2 = new PrimeTester(numberUnderTest, HIGHEST_NUMBER_TO_TEST);
-        PrimeTester tester3 = new PrimeTester(numberUnderTest, HIGHEST_NUMBER_TO_TEST);
-        PrimeTester tester4 = new PrimeTester(numberUnderTest, HIGHEST_NUMBER_TO_TEST);
+        Thread tester1 = new Thread(new PrimeTester(numberUnderTest, HIGHEST_NUMBER_TO_TEST));
+        Thread tester2 = new Thread(new PrimeTester(numberUnderTest, HIGHEST_NUMBER_TO_TEST));
+        Thread tester3 = new Thread(new PrimeTester(numberUnderTest, HIGHEST_NUMBER_TO_TEST));
+        Thread tester4 = new Thread(new PrimeTester(numberUnderTest, HIGHEST_NUMBER_TO_TEST));
 
-        tester1.run();
-        tester2.run();
-        tester3.run();
-        tester4.run();
+        tester1.start();
+        tester2.start();
+        tester3.start();
+        tester4.start();
 
     }
 }

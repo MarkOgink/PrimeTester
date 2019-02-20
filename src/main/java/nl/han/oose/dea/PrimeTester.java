@@ -3,7 +3,7 @@ package nl.han.oose.dea;
 import nl.han.oose.dea.NumberUnderTest;
 import org.apache.commons.math3.primes.Primes;
 
-public class PrimeTester {
+public class PrimeTester implements Runnable {
 
     NumberUnderTest numberUnderTest;
     int highestNumberToTest;
@@ -19,7 +19,7 @@ public class PrimeTester {
 
             int number = numberUnderTest.getNumber();
 
-            if (number > highestNumberToTest){
+            if (number > highestNumberToTest) {
                 break;
             }
 
@@ -31,7 +31,11 @@ public class PrimeTester {
         }
     }
 
-    public void run(){
-        startTesting();
+    public void run() {
+        try {
+            startTesting();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
